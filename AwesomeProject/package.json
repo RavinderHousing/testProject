@@ -7,7 +7,10 @@
     "ios": "react-native run-ios",
     "lint": "eslint .",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest",
+    "androidCommon:bundle": "react-native bundle --platform android  --entry-file packages/common/index.js --bundle-output android/app/src/main/assets/index.common.bundle --assets-dest android/app/src/main/res/ --config metro.common.config.js",
+    "androidAppA:bundle": "react-native bundle --platform android --entry-file packages/appA/index.js --bundle-output android/app/src/main/assets/index.appA.bundle --assets-dest android/app/src/main/res/ --config metro.bundle.config.js",
+    "androidAppB:bundle": "react-native bundle --platform android --entry-file packages/appB/index.js --bundle-output android/app/src/main/assets/index.appB.bundle --assets-dest android/app/src/main/res/ --config metro.bundle.config.js"
   },
   "dependencies": {
     "react": "18.2.0",
